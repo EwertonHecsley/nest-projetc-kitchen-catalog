@@ -1,13 +1,13 @@
-import { randomUUID } from "node:crypto";
+import { randomUUID } from 'node:crypto';
 
-export default class Identity{
-    private readonly value:string;
+export default class Identity {
+  private readonly value: string;
 
-    constructor(value?:string){
-        this.value = value ?? randomUUID();
-    }
+  constructor(value?: string) {
+    this.value = value ?? randomUUID();
+  }
 
-    get id():string{
-        return this.value;
-    }
+  get id(): string {
+    return this.value;
+  }
 }
