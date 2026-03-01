@@ -14,11 +14,11 @@ export type CreateProductRequest = {
 };
 
 export const PRODUCT_CATEGORIES: ProductCategory[] = [
-      'ENTRADAS',
-      'PRATOS_PRINCIPAIS',
-      'SOBREMESAS',
-      'BEBIDAS',
-    ];
+  'ENTRADAS',
+  'PRATOS_PRINCIPAIS',
+  'SOBREMESAS',
+  'BEBIDAS',
+];
 
 export default class CreateProductFactory {
   static validate(

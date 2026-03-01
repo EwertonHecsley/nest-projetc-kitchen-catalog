@@ -10,7 +10,7 @@ export type UpdateProductRequest = {
   name?: string;
   price?: number;
   category?: ProductCategory;
-  photo?: string | null;    
+  photo?: string | null;
   isVisible?: boolean;
 };
 
