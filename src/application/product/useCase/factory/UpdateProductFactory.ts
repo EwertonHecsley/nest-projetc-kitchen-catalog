@@ -45,7 +45,7 @@ export default class UpdateProductFactory {
     if (data.price !== undefined) {
       const price = data.price;
 
-      if (!Number.isFinite(price) || price <= 0) {
+      if (!Number.isFinite(price) || price < 0) {
         return left(new InvalidPriceException());
       }
 
@@ -70,6 +70,10 @@ export default class UpdateProductFactory {
         if (r.isLeft()) return left(r.value);
       } else {
         const photo = data.photo.trim();
+
+        if (!photo) {
+          return left(new InvalidPhotoUrlException());
+        }
 
         try {
           new URL(photo);
